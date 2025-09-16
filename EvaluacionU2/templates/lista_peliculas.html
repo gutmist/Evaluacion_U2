@@ -1,0 +1,7 @@
+<h1>Lista de Películas</h1>
+<a href="{% url 'crear_pelicula' %}">Agregar nueva película</a>
+<ul>
+    {% for pelicula in peliculas %}
+        <li>{{ pelicula.nombre }} - {{ pelicula.director }} ({{ pelicula.año }})</li>
+    {% endfor %}
+</ul>
